@@ -79,7 +79,7 @@ export class AppComponent implements OnInit {
   constructor(private heroService: HeroService) { }
 
   ngOnInit(): void {
-this.getHeroes();
+    this.getHeroes();
   }
 
   onSelect(hero: Hero): void {
@@ -87,7 +87,7 @@ this.getHeroes();
   }
 
   getHeroes(): void {
-    this.heroes = this.heroService.getHeroes();
+    this.heroService.getHeroes().then(heroes => this.heroes = heroes);
   }
 
 }
