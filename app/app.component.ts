@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Hero } from './hero';
+import { HeroService } from './hero.service';
 
 @Component({
   selector: 'my-app',
@@ -64,6 +65,8 @@ import { Hero } from './hero';
     </ul>
     <my-hero-detail [hero]="selectedHero"></my-hero-detail>
   `,
+  providers: [HeroService]
+
 })
 
 export class AppComponent {
@@ -74,6 +77,12 @@ export class AppComponent {
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
   }
+
+  getHeroes(): void {
+    this.heroes = this.heroService.getHeroes();
+  }
+
+  constructor(private heroService: HeroService) { }
 }
 
 
