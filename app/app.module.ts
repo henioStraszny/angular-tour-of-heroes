@@ -17,11 +17,11 @@ import { HeroService } from './hero.service';
     HeroDetailComponent,
     HeroesComponent
   ],
-  bootstrap: [
-    AppComponent
-  ],
   providers: [
     HeroService
+  ],
+  bootstrap: [
+    AppComponent
   ]
 })
 export class AppModule { }
