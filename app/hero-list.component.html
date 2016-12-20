@@ -1,0 +1,7 @@
+<h1>{{title}}</h1>
+<input #box (keyup.enter)="addHero(box.value); box.value=''" (blur)="addHero(box.value); box.value=''">
+<button (click)="addHero(box.value); box.value=''">Add</button>
+<p>Heroes:</p>
+<ul>
+    <li *ngFor="let hero of heroes">{{hero.name}}</li>
+</ul>

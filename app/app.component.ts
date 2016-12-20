@@ -10,6 +10,9 @@ import { Hero } from './hero';
 })
 export class AppComponent {
     title = 'Tour of Heroes';
+    clickMessage = '';
+    values = '';
+    enterValues = '';
 
     heroes = [
         new Hero(1, 'Windstorm'),
@@ -18,4 +21,21 @@ export class AppComponent {
         new Hero(1, 'Tornado')];
 
     myHero = this.heroes[0];
+
+    onClickMe() {
+        this.clickMessage = 'You are my hero';
+    }
+
+    onKey(event: KeyboardEvent) {
+
+        this.values += (<HTMLInputElement>event.target).value + ' | ';
+    }
+
+    onKey2(plecy: string) {
+        this.values += plecy + ' | ';
+    }
+
+    onEnter(tekst: string) {
+        this.enterValues += tekst;
+    }
 }
