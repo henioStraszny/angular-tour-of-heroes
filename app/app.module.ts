@@ -17,6 +17,7 @@ import { HeroesComponent } from './heroes.component';
 import { HeroDetailComponent } from './hero-detail.component';
 import { HeroSearchComponent } from './hero-search.component';
 import { HeroListComponent } from './hero-list.component';
+import { HeroFormComponent } from './hero-form.component';
 import { HeroService } from './hero.service';
 
 @NgModule({
@@ -33,7 +34,8 @@ import { HeroService } from './hero.service';
         HeroDetailComponent,
         HeroesComponent,
         HeroSearchComponent,
-        HeroListComponent
+        HeroListComponent,
+        HeroFormComponent
     ],
     providers: [
         HeroService

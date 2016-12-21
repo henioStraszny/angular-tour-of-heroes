@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard.component'
 import { HeroesComponent } from './heroes.component'
 import { HeroDetailComponent } from './hero-detail.component'
 import { HeroListComponent } from './hero-list.component'
+import { HeroFormComponent } from './hero-form.component'
 
 const routes: Routes = [{
     path: '',
@@ -26,6 +27,10 @@ const routes: Routes = [{
 {
     path: 'list',
     component: HeroListComponent
+},
+{
+    path: 'form',
+    component: HeroFormComponent
 }
 ]
 
