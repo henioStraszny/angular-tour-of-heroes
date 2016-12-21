@@ -16,7 +16,7 @@ export class HeroListComponent {
     ];
 
     public addHero(heroName: string) {
-        if(heroName)
-        this.heroes.push(new Hero(this.heroes.length, heroName));
+        if (heroName)
+            this.heroes.push(new Hero(this.heroes.length, heroName));
     }
 }
